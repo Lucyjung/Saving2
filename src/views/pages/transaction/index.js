@@ -5,9 +5,11 @@ import TransactionTable from '../../components/transaction/TransactionTable';
 import LargeButton from '../../components/transaction/LargeButton';
 import SummaryTable from '../../components/transaction/SummaryTable';
 import BarChartGraph from '../../components/transaction/BarChartGraph';
+import ProgressBar from '../../components/transaction/ProgressBar';
 
 const expenseLabel = 'Add Expense';
 const incomeLabel = 'Add Income';
+const defaultProgressText = 'Expense/Bugget';
 
 const defaultTableData = [
     { 'Catagories': 'Food', 'Price': '100'},
@@ -45,9 +47,6 @@ export class Transaction extends Component {
 
   }
 
-  renderNotification() {
-
-  }
   handleAddExpense() {
 
   }
@@ -83,8 +82,11 @@ export class Transaction extends Component {
             dataKey1={dataKey1}
             dataKey2={dataKey2}
           />
+          <ProgressBar
+            text={defaultProgressText}
+            progress="60"
+          />
         </div>
-
       </div>
     );
   }
